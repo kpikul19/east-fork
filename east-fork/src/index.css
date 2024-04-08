@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+
+@font-face { 
+  font-family: 'Galano Classic'; 
+  src: url(./assets/fonts/Galano-Classic-regular.12ffe701.otf) format('opentype'); 
+  font-weight: normal; 
+  font-style: normal; 
+} 
+  
+@font-face { 
+  font-family: 'Galano Classic Semibold'; 
+  src: url(./assets/fonts/Galano-Classic-semibold.14418bbd.otf) format('opentype'); 
+  font-weight: normal; 
+  font-style: normal; 
+} 
+
+@font-face { 
+  font-family: 'Quincy Black'; 
+  src: url(./assets/fonts/quincy-black.0febc9b9.otf) format('opentype'); 
+  font-weight: normal; 
+  font-style: normal; 
+} 
+
+@font-face { 
+  font-family: 'Quincy Extra Bold'; 
+  src: url(./assets/fonts/quincy-extra-bold.7f25f376.otf) format('opentype'); 
+  font-weight: normal; 
+  font-style: normal; 
+} 
+
+@font-face { 
+  font-family: 'Quincy Text'; 
+  src: url(./assets/fonts/quincy-text.44f36ce7.otf) format('opentype'); 
+  font-weight: normal; 
+  font-style: normal; 
+} 
+
+@font-face { 
+  font-family: 'Toma Webfont'; 
+  src: url(./assets/fonts/toma-webfont.8ca1612c.otf) format('opentype'); 
+  font-weight: normal; 
+  font-style: normal; 
+} 
+
+body {
+  margin: 0;
+  font-family: "Galano Classic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.navbar {
+  padding: 15px 0px;
+  animation: myAnim 2s ease-in-out forwards;
+  font-family: "Quincy Black";
+  font-size: 28px;
+}
+
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: translateY(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.glaze-chooser-container {
+  width: 100vw;
+  display: flex;
+  background-color: rgb(246, 234, 227);
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.select-container-outer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.inner-select-container {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 25%;
+  border-right: 1px solid black;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  justify-content: space-evenly;
+  background-color: white;
+}
+
+.inner-individual-select-container-bottom-plate, .inner-individual-select-container-middle-plate, .inner-individual-select-container-top-plate  {
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.select-label {
+  font-weight: 900;
+  font-size: 16px;
+  padding-bottom: 15px;
+  padding-left: 2px;
+  font-family: "Toma Webfont", 'cursive';
+  font-weight: 300;
+}
+
+.plate-image-container-wrapper {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.plate-image-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.plate-image-bottom {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.plate-image-middle{
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 25px;
+  margin-left: auto;
+  transform: scale(.80);
+  margin-right: auto;
+}
+
+.plate-image-top{
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 45px;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  transform: scale(.62);
+}
+
+.dropdown-container-outer {
+  margin-bottom: 200px;
+  padding-top: 200px;
+  display: inline-flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.dropdown-arrow {
+  height: 20px;
+  padding-right: 5px;
+}
+
+.footer {
+  height: 130px;
+}
+
+
+/* tablet media queries */
+
+/* .glaze-chooser-container {
+  background-color: rgb(246, 234, 227);
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.inner-select-container {
+  width: 100%;
+  display: inline-flex;
+  border-bottom: 1px solid black;
+  padding: 20px 0px;
+  justify-content: center;
+  gap: 20px;
+}
+
+.plate-image-container-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+} */
+
+
+
+/* mobile media queries */
