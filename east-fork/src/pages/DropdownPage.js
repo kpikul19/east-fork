@@ -84,14 +84,11 @@ const DropdownPage = () => {
                 backgroundColor: "rgb(244, 243, 237);",
                 
               },
-            //   backgroundColor: isFocused ? "red" : "blue",
               "&:hover": {
                 // backgroundColor: "red"
               },
               "&:focus": {
                 border: "none",
-                // backgroundColor: "red"
-                // boxShadow: "0px 0px 6px #ff8b67"
               },
               "&:active": {
                 border: "none",
@@ -119,6 +116,7 @@ const DropdownPage = () => {
                         name="mySelect1"
                         styles={customStyles}
                         options={options} 
+                        isSearchable={ false }
                         components={
                             {
                             IndicatorSeparator: () => null,
@@ -138,6 +136,7 @@ const DropdownPage = () => {
                         name="mySelect2"
                         styles={customStyles}
                         options={options} 
+                        isSearchable={ false }
                         components={
                             {
                             IndicatorSeparator: () => null,
@@ -157,6 +156,7 @@ const DropdownPage = () => {
                         name="mySelect3"
                         styles={customStyles}
                         options={options} 
+                        isSearchable={ false }
                         components={
                             {
                             IndicatorSeparator: () => null,
@@ -174,9 +174,9 @@ const DropdownPage = () => {
             </div>
             <div className="plate-image-container-wrapper">
                 <div className="plate-image-container">
-                    <img src={require(`../assets/${selectedOption}.png`)} alt="Largest ceramic plate on the bottom of two plates stacked on top of it." className="plate-image-bottom"/> 
-                    <img src={require(`../assets/${selectedOption2}.png`)} alt="Middle ceramic plate stacked on top of the larger plate and beneath the smallest plate " className="plate-image-middle"/>
-                    <img src={require(`../assets/${selectedOption3}.png`)} alt="The smallest ceramic plate on the top of the other two plates" className="plate-image-top"/>
+                    <img src={require(`../assets/${selectedOption}.avif`)} alt="Largest ceramic plate on the bottom of two plates stacked on top of it." className="plate-image-bottom"/> 
+                    <img src={require(`../assets/${selectedOption2}.avif`)} alt="Middle ceramic plate stacked on top of the larger plate and beneath the smallest plate " className="plate-image-middle"/>
+                    <img src={require(`../assets/${selectedOption3}.avif`)} alt="The smallest ceramic plate on the top of the other two plates" className="plate-image-top"/>
                 </div>
             </div>
         </div>
