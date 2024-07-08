@@ -38,6 +38,7 @@ const DropdownPage = () => {
         { label: 'Malt', value: 'Malt' },
         { label: 'Molasses', value: 'Molasses' },
         { label: 'Morel', value: 'Morel' },
+        { label: 'Neptune', value: 'Neptune' },
         { label: 'Night Swim', value: 'Night-Swim' },
         { label: 'Orchard', value: 'Orchard' },
         { label: 'Panna Cotta', value: 'Panna-Cotta' },
