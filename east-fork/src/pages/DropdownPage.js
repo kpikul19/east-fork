@@ -55,7 +55,8 @@ const DropdownPage = () => {
         { label: 'Tequila Sunrise', value: 'Tequila-Sunrise' },
         { label: 'Thistle', value: 'Thistle' },
         { label: 'Utah', value: 'Utah' },
-        { label: 'Wine Dark Sea', value: 'Wine-Dark-Sea' }
+        { label: 'Wine Dark Sea', value: 'Wine-Dark-Sea' },
+        { label: 'Yuzu', value: 'Yuzu' }
     ]
     
     // const [plate, setPlate] = useState();
