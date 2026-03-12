@@ -2,6 +2,93 @@ import React, { useState } from "react";
 import Select, { components } from "react-select";
 
 // ---------------------------------------------------------------------------
+// Pre-import all glaze images so webpack can resolve them at build time.
+// Dynamic require() with a variable path fails because the bundler can't
+// statically analyze which files to include.
+// ---------------------------------------------------------------------------
+import imgAmaro from "../assets/Amaro.avif";
+import imgBigSky from "../assets/Big-Sky.avif";
+import imgBlackMountain from "../assets/Black-Mountain.avif";
+import imgBlueRidge from "../assets/Blue-Ridge.avif";
+import imgButter from "../assets/Butter.avif";
+import imgCelery from "../assets/Celery.avif";
+import imgChar from "../assets/Char.avif";
+import imgDaylily from "../assets/Daylily.avif";
+import imgEggshell from "../assets/Eggshell.avif";
+import imgEmber from "../assets/Ember.avif";
+import imgFiddlehead from "../assets/Fiddlehead.avif";
+import imgHarvestMoon from "../assets/Harvest-Moon.avif";
+import imgHenrisRed from "../assets/Henris-Red.avif";
+import imgInThePines from "../assets/In-the-Pines.avif";
+import imgLambsEar from "../assets/Lambs-Ear.avif";
+import imgLapis from "../assets/Lapis.avif";
+import imgMalibu from "../assets/Malibu.avif";
+import imgMalt from "../assets/Malt.avif";
+import imgMolasses from "../assets/Molasses.avif";
+import imgMorel from "../assets/Morel.avif";
+import imgNeptune from "../assets/Neptune.avif";
+import imgNightSwim from "../assets/Night-Swim.avif";
+import imgOrchard from "../assets/Orchard.avif";
+import imgPannaCotta from "../assets/Panna-Cotta.avif";
+import imgPeachyKeen from "../assets/Peachy-Keen.avif";
+import imgPiglet from "../assets/Piglet.avif";
+import imgPinto from "../assets/Pinto.avif";
+import imgPoinsettia from "../assets/Poinsettia.avif";
+import imgPollen from "../assets/Pollen.avif";
+import imgPrune from "../assets/Prune.avif";
+import imgRococo from "../assets/Rococo.avif";
+import imgSecretBeach from "../assets/Secret-Beach.avif";
+import imgSoapstone from "../assets/Soapstone.avif";
+import imgTaro from "../assets/Taro.avif";
+import imgTequilaSunrise from "../assets/Tequila-Sunrise.avif";
+import imgThistle from "../assets/Thistle.avif";
+import imgUtah from "../assets/Utah.avif";
+import imgWineDarkSea from "../assets/Wine-Dark-Sea.avif";
+import imgYuzu from "../assets/Yuzu.avif";
+
+const GLAZE_IMAGES = {
+  "Amaro": imgAmaro,
+  "Big-Sky": imgBigSky,
+  "Black-Mountain": imgBlackMountain,
+  "Blue-Ridge": imgBlueRidge,
+  "Butter": imgButter,
+  "Celery": imgCelery,
+  "Char": imgChar,
+  "Daylily": imgDaylily,
+  "Eggshell": imgEggshell,
+  "Ember": imgEmber,
+  "Fiddlehead": imgFiddlehead,
+  "Harvest-Moon": imgHarvestMoon,
+  "Henris-Red": imgHenrisRed,
+  "In-the-Pines": imgInThePines,
+  "Lambs-Ear": imgLambsEar,
+  "Lapis": imgLapis,
+  "Malibu": imgMalibu,
+  "Malt": imgMalt,
+  "Molasses": imgMolasses,
+  "Morel": imgMorel,
+  "Neptune": imgNeptune,
+  "Night-Swim": imgNightSwim,
+  "Orchard": imgOrchard,
+  "Panna-Cotta": imgPannaCotta,
+  "Peachy-Keen": imgPeachyKeen,
+  "Piglet": imgPiglet,
+  "Pinto": imgPinto,
+  "Poinsettia": imgPoinsettia,
+  "Pollen": imgPollen,
+  "Prune": imgPrune,
+  "Rococo": imgRococo,
+  "Secret-Beach": imgSecretBeach,
+  "Soapstone": imgSoapstone,
+  "Taro": imgTaro,
+  "Tequila-Sunrise": imgTequilaSunrise,
+  "Thistle": imgThistle,
+  "Utah": imgUtah,
+  "Wine-Dark-Sea": imgWineDarkSea,
+  "Yuzu": imgYuzu,
+};
+
+// ---------------------------------------------------------------------------
 // Glaze data extracted from component so it isn't recreated on every render
 // ---------------------------------------------------------------------------
 const GLAZE_OPTIONS = [
@@ -158,7 +245,7 @@ const DropdownPage = () => {
           {PLATE_CONFIG.map((plate, index) => (
             <img
               key={plate.id}
-              src={require(`../assets/${selections[index]}.avif`)}
+              src={GLAZE_IMAGES[selections[index]]}
               alt={plate.imageAlt}
               className={`${plate.className} glaze-fade`}
             />
